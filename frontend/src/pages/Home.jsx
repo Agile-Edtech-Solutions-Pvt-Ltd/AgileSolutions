@@ -198,87 +198,57 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Right Side - Professional Mobile Mockup */}
+            {/* Right Side - Professional Indian Office Image */}
             <div className="lg:pl-8">
               <div className="relative">
-                {/* Floating Phone Mockup */}
-                <div className="relative mx-auto w-64 h-96 bg-gradient-to-b from-gray-800 to-gray-900 rounded-3xl p-2 shadow-2xl transform rotate-6 hover:rotate-3 transition-transform duration-500">
-                  {/* Phone Screen */}
-                  <div className="w-full h-full bg-white rounded-2xl overflow-hidden relative">
-                    {/* Status Bar */}
-                    <div className="bg-gray-100 h-6 flex items-center justify-between px-4 text-xs">
-                      <span className="text-gray-600">9:41</span>
-                      <div className="flex space-x-1">
-                        <div className="w-4 h-2 bg-green-500 rounded-sm"></div>
-                        <div className="w-4 h-2 bg-gray-300 rounded-sm"></div>
-                        <div className="w-4 h-2 bg-gray-300 rounded-sm"></div>
-                      </div>
-                    </div>
-                    
-                    {/* App Content */}
-                    <div className="p-4 h-full bg-gradient-to-b from-blue-50 to-white">
-                      <div className="text-center mb-4">
-                        <div className="w-16 h-16 bg-blue-600 rounded-full mx-auto mb-3 flex items-center justify-center">
-                          <Code className="w-8 h-8 text-white" />
+                {/* Office Image */}
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                  <img 
+                    src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Professional Office Environment"
+                    className="w-full h-96 object-cover"
+                  />
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/70 via-transparent to-transparent">
+                    <div className="absolute bottom-6 left-6 right-6 text-white">
+                      <h3 className="text-2xl font-bold mb-2">
+                        Professional Team
+                      </h3>
+                      <p className="text-blue-100 text-sm">
+                        Experienced professionals dedicated to delivering exceptional digital solutions
+                      </p>
+                      <div className="flex items-center mt-4 space-x-4">
+                        <div className="flex items-center">
+                          <Users className="w-4 h-4 mr-2" />
+                          <span className="text-sm">Expert Team</span>
                         </div>
-                        <h3 className="font-bold text-gray-800 text-sm">Agile Solutions</h3>
-                        <p className="text-xs text-gray-600">Mobile App</p>
-                      </div>
-                      
-                      <div className="space-y-3">
-                        <div className="bg-white rounded-lg p-3 shadow-sm">
-                          <div className="flex items-center">
-                            <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
-                              <TrendingUp className="w-4 h-4 text-blue-600" />
-                            </div>
-                            <div>
-                              <div className="text-xs font-medium text-gray-800">Digital Marketing</div>
-                              <div className="text-xs text-gray-500">Lead Generation</div>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        <div className="bg-white rounded-lg p-3 shadow-sm">
-                          <div className="flex items-center">
-                            <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                              <Code className="w-4 h-4 text-green-600" />
-                            </div>
-                            <div>
-                              <div className="text-xs font-medium text-gray-800">Web Development</div>
-                              <div className="text-xs text-gray-500">Custom Solutions</div>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        <div className="bg-white rounded-lg p-3 shadow-sm">
-                          <div className="flex items-center">
-                            <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-3">
-                              <Smartphone className="w-4 h-4 text-purple-600" />
-                            </div>
-                            <div>
-                              <div className="text-xs font-medium text-gray-800">Mobile Apps</div>
-                              <div className="text-xs text-gray-500">iOS & Android</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <div className="mt-6">
-                        <div className="bg-blue-600 text-white text-center py-2 rounded-lg text-xs font-medium">
-                          Get Quote
+                        <div className="flex items-center">
+                          <Award className="w-4 h-4 mr-2" />
+                          <span className="text-sm">7+ Years</span>
                         </div>
                       </div>
                     </div>
                   </div>
-                  
-                  {/* Home Indicator */}
-                  <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gray-600 rounded-full"></div>
+                </div>
+
+                {/* Floating Stats Cards */}
+                <div className="absolute -top-4 -right-4 bg-white rounded-lg p-4 shadow-lg border">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-blue-600">600+</div>
+                    <div className="text-xs text-gray-600">Projects</div>
+                  </div>
+                </div>
+                
+                <div className="absolute -bottom-4 -left-4 bg-white rounded-lg p-4 shadow-lg border">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-600">95%</div>
+                    <div className="text-xs text-gray-600">Satisfaction</div>
+                  </div>
                 </div>
 
                 {/* Floating Elements */}
                 <div className="absolute top-0 right-0 w-12 h-12 bg-blue-100 rounded-full opacity-60 animate-bounce"></div>
                 <div className="absolute bottom-10 left-0 w-8 h-8 bg-green-100 rounded-full opacity-60 animate-pulse"></div>
-                <div className="absolute top-1/2 -right-4 w-6 h-6 bg-purple-100 rounded-full opacity-60 animate-ping"></div>
               </div>
             </div>
           </div>
