@@ -384,6 +384,119 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Industries We Serve Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-blue-100 text-blue-800">
+              Industries We Serve
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Empowering Businesses Across Industries
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              From healthcare to e-commerce, we deliver tailored digital solutions 
+              that drive growth across diverse industry verticals
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="text-center hover:shadow-lg transition-shadow group bg-white">
+              <CardContent className="p-6">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600 transition-colors">
+                  <Stethoscope className="w-8 h-8 text-blue-600 group-hover:text-white" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">Healthcare</h3>
+                <p className="text-sm text-gray-600">Medical practices, clinics, telemedicine platforms</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-lg transition-shadow group bg-white">
+              <CardContent className="p-6">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-600 transition-colors">
+                  <ShoppingCart className="w-8 h-8 text-green-600 group-hover:text-white" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">E-commerce</h3>
+                <p className="text-sm text-gray-600">Online stores, marketplace solutions, retail platforms</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-lg transition-shadow group bg-white">
+              <CardContent className="p-6">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-600 transition-colors">
+                  <Users className="w-8 h-8 text-purple-600 group-hover:text-white" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">Education</h3>
+                <p className="text-sm text-gray-600">Schools, training institutes, e-learning platforms</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-lg transition-shadow group bg-white">
+              <CardContent className="p-6">
+                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-600 transition-colors">
+                  <Car className="w-8 h-8 text-orange-600 group-hover:text-white" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">Transportation</h3>
+                <p className="text-sm text-gray-600">Logistics, cab services, fleet management</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-lg transition-shadow group bg-white">
+              <CardContent className="p-6">
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600 transition-colors">
+                  <Building className="w-8 h-8 text-red-600 group-hover:text-white" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">Real Estate</h3>
+                <p className="text-sm text-gray-600">Property portals, real estate agencies, construction</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-lg transition-shadow group bg-white">
+              <CardContent className="p-6">
+                <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-indigo-600 transition-colors">
+                  <TrendingUp className="w-8 h-8 text-indigo-600 group-hover:text-white" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">Finance</h3>
+                <p className="text-sm text-gray-600">Banking, fintech, investment platforms, insurance</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-lg transition-shadow group bg-white">
+              <CardContent className="p-6">
+                <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-yellow-600 transition-colors">
+                  <Zap className="w-8 h-8 text-yellow-600 group-hover:text-white" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">Technology</h3>
+                <p className="text-sm text-gray-600">SaaS platforms, tech startups, software solutions</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-lg transition-shadow group bg-white">
+              <CardContent className="p-6">
+                <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-teal-600 transition-colors">
+                  <Palette className="w-8 h-8 text-teal-600 group-hover:text-white" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">Creative</h3>
+                <p className="text-sm text-gray-600">Design agencies, media, entertainment, advertising</p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-lg text-gray-600 mb-6">
+              Don't see your industry? We work with businesses of all sizes and sectors.
+            </p>
+            <Button 
+              size="lg"
+              className="bg-blue-600 hover:bg-blue-700"
+              onClick={() => setIsQuoteModalOpen(true)}
+            >
+              Discuss Your Industry Needs
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
