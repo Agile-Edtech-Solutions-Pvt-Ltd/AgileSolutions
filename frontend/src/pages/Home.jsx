@@ -107,37 +107,30 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-slate-50 via-blue-50 to-white overflow-hidden">
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent transform -skew-y-6"></div>
-          <div className="absolute top-0 left-0 w-full h-full">
-            <div className="grid grid-cols-8 gap-4 h-full opacity-20">
-              {[...Array(32)].map((_, i) => (
-                <div key={i} className="bg-white rounded-full w-2 h-2 animate-pulse"></div>
-              ))}
-            </div>
-          </div>
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-200 to-transparent transform -skew-y-6"></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Content */}
             <div className="text-left">
-              <Badge className="mb-6 bg-blue-500 text-white border-blue-400 hover:bg-blue-400">
+              <Badge className="mb-6 bg-blue-600 text-white hover:bg-blue-700">
                 Leading Digital Solutions Partner in Jaipur
               </Badge>
               
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-gray-900">
                 We Build Powerful
                 <br />
-                <span className="text-yellow-400 relative">
+                <span className="text-blue-600 relative">
                   {primaryServices[currentServiceIndex]}
-                  <div className="absolute bottom-0 left-0 w-full h-1 bg-yellow-400 transform origin-left animate-pulse"></div>
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-blue-600 transform origin-left animate-pulse"></div>
                 </span>
               </h1>
 
-              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Transform your business with cutting-edge digital solutions. From stunning websites 
                 to powerful marketing campaigns, we help businesses in Jaipur and worldwide achieve 
                 measurable growth.
@@ -146,7 +139,7 @@ const Home = () => {
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button 
                   size="lg"
-                  className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold px-8 py-3 transform hover:scale-105 transition-all duration-200"
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 transform hover:scale-105 transition-all duration-200"
                   onClick={() => setIsQuoteModalOpen(true)}
                 >
                   Get Free Quote
@@ -156,7 +149,7 @@ const Home = () => {
                 <Button 
                   size="lg"
                   variant="outline"
-                  className="border-green-400 text-green-400 hover:bg-green-400 hover:text-blue-900 px-8 py-3 transition-all duration-200"
+                  className="border-green-600 text-green-600 hover:bg-green-50 px-8 py-3 transition-all duration-200"
                   onClick={() => window.open('https://wa.me/918005677079', '_blank')}
                 >
                   <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
@@ -168,7 +161,7 @@ const Home = () => {
                 <Button 
                   size="lg"
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-blue-700 px-8 py-3 transition-all duration-200"
+                  className="border-gray-400 text-gray-600 hover:bg-gray-50 px-8 py-3 transition-all duration-200"
                   onClick={() => window.open('tel:+918005677079', '_self')}
                 >
                   <Phone className="mr-2 w-5 h-5" />
@@ -177,69 +170,103 @@ const Home = () => {
               </div>
 
               {/* Trust Indicators */}
-              <div className="flex flex-wrap items-center gap-6 text-blue-200">
+              <div className="flex flex-wrap items-center gap-6 text-gray-600">
                 <div className="flex items-center">
-                  <Star className="w-5 h-5 text-yellow-400 mr-1" />
+                  <Star className="w-5 h-5 text-yellow-500 mr-1" />
                   <span className="text-sm">95% Client Satisfaction</span>
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-1" />
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-1" />
                   <span className="text-sm">600+ Projects Delivered</span>
                 </div>
                 <div className="flex items-center">
-                  <Award className="w-5 h-5 text-yellow-400 mr-1" />
+                  <Award className="w-5 h-5 text-blue-600 mr-1" />
                   <span className="text-sm">7+ Years Experience</span>
                 </div>
               </div>
             </div>
 
-            {/* Right Side - Visual Element */}
+            {/* Right Side - Professional Mobile Mockup */}
             <div className="lg:pl-8">
               <div className="relative">
-                {/* Main Visual Card */}
-                <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
-                  <div className="text-center mb-6">
-                    <div className="inline-flex items-center justify-center w-20 h-20 bg-yellow-500 rounded-full mb-4">
-                      {React.createElement(serviceIcons[currentServiceIndex], {
-                        className: "w-10 h-10 text-blue-900"
-                      })}
+                {/* Floating Phone Mockup */}
+                <div className="relative mx-auto w-64 h-96 bg-gradient-to-b from-gray-800 to-gray-900 rounded-3xl p-2 shadow-2xl transform rotate-6 hover:rotate-3 transition-transform duration-500">
+                  {/* Phone Screen */}
+                  <div className="w-full h-full bg-white rounded-2xl overflow-hidden relative">
+                    {/* Status Bar */}
+                    <div className="bg-gray-100 h-6 flex items-center justify-between px-4 text-xs">
+                      <span className="text-gray-600">9:41</span>
+                      <div className="flex space-x-1">
+                        <div className="w-4 h-2 bg-green-500 rounded-sm"></div>
+                        <div className="w-4 h-2 bg-gray-300 rounded-sm"></div>
+                        <div className="w-4 h-2 bg-gray-300 rounded-sm"></div>
+                      </div>
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">
-                      Our Expertise
-                    </h3>
-                    <p className="text-blue-200">
-                      Specialized in delivering results-driven digital solutions
-                    </p>
+                    
+                    {/* App Content */}
+                    <div className="p-4 h-full bg-gradient-to-b from-blue-50 to-white">
+                      <div className="text-center mb-4">
+                        <div className="w-16 h-16 bg-blue-600 rounded-full mx-auto mb-3 flex items-center justify-center">
+                          <Code className="w-8 h-8 text-white" />
+                        </div>
+                        <h3 className="font-bold text-gray-800 text-sm">Agile Solutions</h3>
+                        <p className="text-xs text-gray-600">Mobile App</p>
+                      </div>
+                      
+                      <div className="space-y-3">
+                        <div className="bg-white rounded-lg p-3 shadow-sm">
+                          <div className="flex items-center">
+                            <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                              <TrendingUp className="w-4 h-4 text-blue-600" />
+                            </div>
+                            <div>
+                              <div className="text-xs font-medium text-gray-800">Digital Marketing</div>
+                              <div className="text-xs text-gray-500">Lead Generation</div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div className="bg-white rounded-lg p-3 shadow-sm">
+                          <div className="flex items-center">
+                            <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                              <Code className="w-4 h-4 text-green-600" />
+                            </div>
+                            <div>
+                              <div className="text-xs font-medium text-gray-800">Web Development</div>
+                              <div className="text-xs text-gray-500">Custom Solutions</div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div className="bg-white rounded-lg p-3 shadow-sm">
+                          <div className="flex items-center">
+                            <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                              <Smartphone className="w-4 h-4 text-purple-600" />
+                            </div>
+                            <div>
+                              <div className="text-xs font-medium text-gray-800">Mobile Apps</div>
+                              <div className="text-xs text-gray-500">iOS & Android</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="mt-6">
+                        <div className="bg-blue-600 text-white text-center py-2 rounded-lg text-xs font-medium">
+                          Get Quote
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   
-                  <div className="space-y-4">
-                    {primaryServices.map((service, index) => (
-                      <div 
-                        key={index} 
-                        className={`flex items-center p-3 rounded-lg transition-all duration-300 ${
-                          index === currentServiceIndex 
-                            ? 'bg-yellow-500/20 border border-yellow-400' 
-                            : 'bg-white/5'
-                        }`}
-                      >
-                        {React.createElement(serviceIcons[index], {
-                          className: `w-6 h-6 mr-3 ${
-                            index === currentServiceIndex ? 'text-yellow-400' : 'text-blue-300'
-                          }`
-                        })}
-                        <span className={`font-medium ${
-                          index === currentServiceIndex ? 'text-white' : 'text-blue-200'
-                        }`}>
-                          {service}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
+                  {/* Home Indicator */}
+                  <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gray-600 rounded-full"></div>
                 </div>
 
                 {/* Floating Elements */}
-                <div className="absolute -top-4 -right-4 w-16 h-16 bg-yellow-500 rounded-full opacity-20 animate-bounce"></div>
-                <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-green-400 rounded-full opacity-20 animate-pulse"></div>
+                <div className="absolute top-0 right-0 w-12 h-12 bg-blue-100 rounded-full opacity-60 animate-bounce"></div>
+                <div className="absolute bottom-10 left-0 w-8 h-8 bg-green-100 rounded-full opacity-60 animate-pulse"></div>
+                <div className="absolute top-1/2 -right-4 w-6 h-6 bg-purple-100 rounded-full opacity-60 animate-ping"></div>
               </div>
             </div>
           </div>
