@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
@@ -8,14 +8,16 @@ import {
   Smartphone, 
   TrendingUp, 
   Palette, 
-  MessageCircle, 
   Phone, 
   CheckCircle,
   Users,
   Award,
   Clock,
   Star,
-  ArrowRight
+  ArrowRight,
+  ShoppingCart,
+  Target,
+  Zap
 } from 'lucide-react';
 
 const Home = () => {
