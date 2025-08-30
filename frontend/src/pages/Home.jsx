@@ -17,7 +17,10 @@ import {
   ArrowRight,
   ShoppingCart,
   Target,
-  Zap
+  Zap,
+  Car,
+  Building,
+  Stethoscope
 } from 'lucide-react';
 
 const Home = () => {
