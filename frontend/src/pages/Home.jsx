@@ -22,6 +22,44 @@ import {
 
 const Home = () => {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
+
+  const primaryServices = [
+    "Website & eCommerce Development",
+    "Digital Marketing (Lead Generation)", 
+    "Software & Mobile App Development"
+  ];
+
+  const serviceIcons = [Code, TrendingUp, Smartphone];
+
+  // Typing animation effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentServiceIndex((prev) => (prev + 1) % primaryServices.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const primaryServiceCards = [
+    {
+      icon: Code,
+      title: "Website & eCommerce Development",
+      description: "Custom websites, WordPress, Shopify stores, and powerful eCommerce solutions",
+      features: ["Responsive Design", "SEO Optimized", "Payment Integration", "Admin Panel"]
+    },
+    {
+      icon: TrendingUp, 
+      title: "Digital Marketing & Lead Generation",
+      description: "Complete digital marketing strategies to generate quality leads and grow your business",
+      features: ["Google Ads", "Facebook Ads", "SEO Services", "Lead Campaigns"]
+    },
+    {
+      icon: Smartphone,
+      title: "Software & Mobile App Development", 
+      description: "Custom software solutions, Android & iOS apps, and cross-platform development",
+      features: ["Android Apps", "iOS Apps", "Custom Software", "API Integration"]
+    }
+  ];
 
   const stats = [
     { number: '7+', label: 'Years Experience', icon: Clock },
