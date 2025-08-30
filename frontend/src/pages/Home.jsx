@@ -128,53 +128,197 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <Badge className="mb-4 bg-blue-100 text-blue-800">
-              Leading Digital Solutions Partner
-            </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Build Powerful
-              <span className="text-blue-600"> Digital Solutions</span>
-              <br />That Drive Results
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              From stunning websites to powerful mobile apps, we deliver cutting-edge digital solutions 
-              tailored to your business needs. Transform your online presence with Jaipur's most trusted 
-              web development company.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button 
-                size="lg"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3"
-                onClick={() => setIsQuoteModalOpen(true)}
-              >
-                Get Free Quote
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              
-              <Button 
-                size="lg"
-                variant="outline"
-                className="border-green-600 text-green-600 hover:bg-green-50 px-8 py-3"
-                onClick={() => window.open('https://wa.me/918005677079', '_blank')}
-              >
-                <MessageCircle className="mr-2 w-5 h-5" />
-                WhatsApp Us
-              </Button>
-              
-              <Button 
-                size="lg"
-                variant="outline"
-                className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3"
-                onClick={() => window.open('tel:+918005677079', '_self')}
-              >
-                <Phone className="mr-2 w-5 h-5" />
-                Call Now
-              </Button>
+      <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent transform -skew-y-6"></div>
+          <div className="absolute top-0 left-0 w-full h-full">
+            <div className="grid grid-cols-8 gap-4 h-full opacity-20">
+              {[...Array(32)].map((_, i) => (
+                <div key={i} className="bg-white rounded-full w-2 h-2 animate-pulse"></div>
+              ))}
             </div>
+          </div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Side - Content */}
+            <div className="text-left">
+              <Badge className="mb-6 bg-blue-500 text-white border-blue-400 hover:bg-blue-400">
+                Leading Digital Solutions Partner in Jaipur
+              </Badge>
+              
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                We Build Powerful
+                <br />
+                <span className="text-yellow-400 relative">
+                  {primaryServices[currentServiceIndex]}
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-yellow-400 transform origin-left animate-pulse"></div>
+                </span>
+              </h1>
+
+              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+                Transform your business with cutting-edge digital solutions. From stunning websites 
+                to powerful marketing campaigns, we help businesses in Jaipur and worldwide achieve 
+                measurable growth.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <Button 
+                  size="lg"
+                  className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold px-8 py-3 transform hover:scale-105 transition-all duration-200"
+                  onClick={() => setIsQuoteModalOpen(true)}
+                >
+                  Get Free Quote
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+                
+                <Button 
+                  size="lg"
+                  variant="outline"
+                  className="border-green-400 text-green-400 hover:bg-green-400 hover:text-blue-900 px-8 py-3 transition-all duration-200"
+                  onClick={() => window.open('https://wa.me/918005677079', '_blank')}
+                >
+                  <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                  </svg>
+                  WhatsApp Us
+                </Button>
+                
+                <Button 
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-white hover:text-blue-700 px-8 py-3 transition-all duration-200"
+                  onClick={() => window.open('tel:+918005677079', '_self')}
+                >
+                  <Phone className="mr-2 w-5 h-5" />
+                  Call Now
+                </Button>
+              </div>
+
+              {/* Trust Indicators */}
+              <div className="flex flex-wrap items-center gap-6 text-blue-200">
+                <div className="flex items-center">
+                  <Star className="w-5 h-5 text-yellow-400 mr-1" />
+                  <span className="text-sm">95% Client Satisfaction</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-1" />
+                  <span className="text-sm">600+ Projects Delivered</span>
+                </div>
+                <div className="flex items-center">
+                  <Award className="w-5 h-5 text-yellow-400 mr-1" />
+                  <span className="text-sm">7+ Years Experience</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Side - Visual Element */}
+            <div className="lg:pl-8">
+              <div className="relative">
+                {/* Main Visual Card */}
+                <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+                  <div className="text-center mb-6">
+                    <div className="inline-flex items-center justify-center w-20 h-20 bg-yellow-500 rounded-full mb-4">
+                      {React.createElement(serviceIcons[currentServiceIndex], {
+                        className: "w-10 h-10 text-blue-900"
+                      })}
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      Our Expertise
+                    </h3>
+                    <p className="text-blue-200">
+                      Specialized in delivering results-driven digital solutions
+                    </p>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    {primaryServices.map((service, index) => (
+                      <div 
+                        key={index} 
+                        className={`flex items-center p-3 rounded-lg transition-all duration-300 ${
+                          index === currentServiceIndex 
+                            ? 'bg-yellow-500/20 border border-yellow-400' 
+                            : 'bg-white/5'
+                        }`}
+                      >
+                        {React.createElement(serviceIcons[index], {
+                          className: `w-6 h-6 mr-3 ${
+                            index === currentServiceIndex ? 'text-yellow-400' : 'text-blue-300'
+                          }`
+                        })}
+                        <span className={`font-medium ${
+                          index === currentServiceIndex ? 'text-white' : 'text-blue-200'
+                        }`}>
+                          {service}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Floating Elements */}
+                <div className="absolute -top-4 -right-4 w-16 h-16 bg-yellow-500 rounded-full opacity-20 animate-bounce"></div>
+                <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-green-400 rounded-full opacity-20 animate-pulse"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Primary Services Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-blue-100 text-blue-800">
+              Our Primary Services
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              What We Do Best
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Three core services that drive business growth and digital transformation
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {primaryServiceCards.map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <Card key={index} className="hover:shadow-xl transition-all duration-300 group border-2 hover:border-blue-200 bg-white">
+                  <CardHeader className="text-center pb-4">
+                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600 transition-colors duration-300">
+                      <Icon className="w-8 h-8 text-blue-600 group-hover:text-white" />
+                    </div>
+                    <CardTitle className="text-xl mb-3 group-hover:text-blue-600 transition-colors">
+                      {service.title}
+                    </CardTitle>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {service.description}
+                    </p>
+                  </CardHeader>
+                  <CardContent className="pt-0">
+                    <ul className="space-y-3 mb-6">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-700">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    <Button 
+                      className="w-full bg-blue-600 hover:bg-blue-700 group-hover:bg-blue-700"
+                      onClick={() => setIsQuoteModalOpen(true)}
+                    >
+                      Get Started
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
