@@ -267,61 +267,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Primary Services Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-blue-100 text-blue-800">
-              Our Primary Services
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What We Do Best
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Three core services that drive business growth and digital transformation
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {primaryServiceCards.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <Card key={index} className="hover:shadow-xl transition-all duration-300 group border-2 hover:border-blue-200 bg-white">
-                  <CardHeader className="text-center pb-4">
-                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600 transition-colors duration-300">
-                      <Icon className="w-8 h-8 text-blue-600 group-hover:text-white" />
-                    </div>
-                    <CardTitle className="text-xl mb-3 group-hover:text-blue-600 transition-colors">
-                      {service.title}
-                    </CardTitle>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      {service.description}
-                    </p>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <ul className="space-y-3 mb-6">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-700">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    
-                    <Button 
-                      className="w-full bg-blue-600 hover:bg-blue-700 group-hover:bg-blue-700"
-                      onClick={() => setIsQuoteModalOpen(true)}
-                    >
-                      Get Started
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </Button>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
 
       {/* Stats Section */}
       <section className="py-16 bg-white">
