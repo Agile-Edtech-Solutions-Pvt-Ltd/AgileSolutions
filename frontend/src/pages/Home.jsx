@@ -25,13 +25,6 @@ import {
 
 const Home = () => {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-
-  const primaryServices = [
-    "Website & eCommerce Development",
-    "Lead Generation & Digital Marketing", 
-    "Software & Mobile App Development"
-  ];
 
   const clientLogos = [
     { name: "Arezou", logo: "/client-logos/Arezou-logo.webp" },
@@ -43,14 +36,6 @@ const Home = () => {
     { name: "TTP Health", logo: "/client-logos/ttp-health-logo.png" },
     { name: "Volt Cab", logo: "/client-logos/volt-cab-logo.jpg" }
   ];
-
-  // Typing animation effect
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % primaryServices.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
 
   const stats = [
     { number: '7+', label: 'Years Experience', icon: Clock },
