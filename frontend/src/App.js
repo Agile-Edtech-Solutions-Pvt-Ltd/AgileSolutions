@@ -11,6 +11,11 @@ import Services from "./pages/Services";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 
+// Service Category Pages
+import WebDevelopment from "./pages/services/WebDevelopment";
+import MobileAppDevelopment from "./pages/services/MobileAppDevelopment";
+import DigitalMarketing from "./pages/services/DigitalMarketing";
+
 function App() {
   return (
     <div className="App">
@@ -23,6 +28,11 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
+            
+            {/* Service Category Routes */}
+            <Route path="/services/web-development" element={<WebDevelopment />} />
+            <Route path="/services/mobile-development" element={<MobileAppDevelopment />} />
+            <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
           </Routes>
         </main>
         <Footer />
