@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "./components/ui/sonner";
 import Header from "./components/Layout/Header";
 import Footer from "./components/Layout/Footer";
+import FloatingButtons from "./components/Common/FloatingButtons";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -25,6 +26,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <FloatingButtons />
         <Toaster />
       </BrowserRouter>
     </div>
