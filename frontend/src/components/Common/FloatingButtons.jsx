@@ -1,10 +1,10 @@
 import React from 'react';
 import { Button } from '../ui/button';
-import { Phone, Target } from 'lucide-react';
+import { Phone, MapPin } from 'lucide-react';
 
 const FloatingButtons = () => {
   return (
-    <div className="fixed left-6 top-1/2 transform -translate-y-1/2 z-50 flex flex-col gap-4">
+    <div className="fixed left-6 bottom-6 z-50 flex flex-col gap-4">
       {/* WhatsApp Button */}
       <Button
         size="lg"
@@ -34,7 +34,7 @@ const FloatingButtons = () => {
         onClick={() => window.open('https://maps.google.com/maps?daddr=Shop%20-%2017,%20Green%20Commercial%20Park,%20C-2SF,%20Jagatpura,%20Jaipur,%20Rajasthan%20302017', '_blank')}
         title="Get Directions"
       >
-        <Target className="w-7 h-7 group-hover:scale-110 transition-transform" />
+        <MapPin className="w-7 h-7 group-hover:scale-110 transition-transform" />
       </Button>
     </div>
   );
