@@ -34,16 +34,13 @@ const Home = () => {
   ];
 
   const clientLogos = [
-    { name: "All Starr Sports Club", logo: "/client-logos/all-starr-sports-club-logo.png" },
     { name: "Arezou", logo: "/client-logos/Arezou-logo.webp" },
     { name: "Brain Hap", logo: "/client-logos/brain-hap-logo.png" },
-    { name: "Dronetech", logo: "/client-logos/dronetech-logo-white-green.png" },
-    { name: "Facevue Aesthetics", logo: "/client-logos/facevue-aesthetics-logo.png" },
-    { name: "Glacier Agritech", logo: "/client-logos/glacier-agritech-logo.png" },
+    { name: "CaterNinja", logo: "/client-logos/caterninja-logo.webp" },
+    { name: "Diya Mineral", logo: "/client-logos/diya-mineral-logo.png" },
     { name: "Kivvis Pet Care", logo: "/client-logos/kivvis-pet-care-logo.png" },
-    { name: "SRN International School", logo: "/client-logos/srn-internation-school-logo.jpeg" },
-    { name: "TCBS", logo: "/client-logos/TCBS-Logo.png" },
-    { name: "TCTE", logo: "/client-logos/tcte-logo.png" },
+    { name: "RenoteAI", logo: "/client-logos/renoteai.avif" },
+    { name: "TTP Health", logo: "/client-logos/ttp-health-logo.png" },
     { name: "Volt Cab", logo: "/client-logos/volt-cab-logo.jpg" }
   ];
 
