@@ -521,35 +521,14 @@ const Home = () => {
 
           {/* Client Logos Grid */}
           <div className="mb-12">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-              {clientLogos.slice(0, 6).map((client, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 items-center justify-center">
+              {clientLogos.map((client, index) => (
                 <div key={index} className="group">
-                  <div className="bg-gray-50 rounded-xl p-6 hover:bg-white hover:shadow-lg transition-all duration-300 border border-gray-100">
+                  <div className="bg-transparent p-6 hover:bg-gray-50 rounded-xl transition-all duration-300 border border-transparent hover:border-gray-200">
                     <img 
                       src={client.logo} 
                       alt={client.name}
-                      className="max-h-12 w-auto object-contain mx-auto grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
-                      onError={(e) => {
-                        e.target.style.display = 'none';
-                      }}
-                    />
-                  </div>
-                  <p className="text-center text-xs text-gray-500 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                    {client.name}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            {/* Second Row */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center mt-8 justify-center">
-              {clientLogos.slice(6).map((client, index) => (
-                <div key={index} className="group">
-                  <div className="bg-gray-50 rounded-xl p-6 hover:bg-white hover:shadow-lg transition-all duration-300 border border-gray-100">
-                    <img 
-                      src={client.logo} 
-                      alt={client.name}
-                      className="max-h-12 w-auto object-contain mx-auto grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+                      className="max-h-16 w-auto object-contain mx-auto transition-all duration-300 opacity-80 hover:opacity-100 hover:scale-105"
                       onError={(e) => {
                         e.target.style.display = 'none';
                       }}
