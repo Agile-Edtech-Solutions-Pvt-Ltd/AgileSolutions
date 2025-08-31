@@ -29,7 +29,7 @@ const Home = () => {
 
   const primaryServices = [
     "Website & eCommerce Development",
-    "Digital Marketing (Lead Generation)", 
+    "Lead Generation & Digital Marketing", 
     "Software & Mobile App Development"
   ];
 
