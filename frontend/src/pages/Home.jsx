@@ -183,69 +183,42 @@ const Home = () => {
                   Call Now
                 </Button>
               </div>
-
-              {/* Trust Indicators */}
-              <div className="flex flex-wrap items-center gap-6 text-gray-600">
-                <div className="flex items-center">
-                  <Star className="w-5 h-5 text-yellow-500 mr-1" />
-                  <span className="text-sm">95% Client Satisfaction</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-1" />
-                  <span className="text-sm">600+ Projects Delivered</span>
-                </div>
-                <div className="flex items-center">
-                  <Award className="w-5 h-5 text-blue-600 mr-1" />
-                  <span className="text-sm">7+ Years Experience</span>
-                </div>
-              </div>
             </div>
 
-            {/* Right Side - Professional Indian Office Image */}
+            {/* Right Side - Professional Indian Tech Office Image */}
             <div className="lg:pl-8">
               <div className="relative">
                 {/* Office Image */}
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Professional Office Environment"
+                    src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Modern Technology Office"
                     className="w-full h-96 object-cover"
                   />
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/70 via-transparent to-transparent">
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-transparent to-transparent">
                     <div className="absolute bottom-6 left-6 right-6 text-white">
                       <h3 className="text-2xl font-bold mb-2">
-                        Professional Team
+                        Digital Innovation Hub
                       </h3>
-                      <p className="text-blue-100 text-sm">
-                        Experienced professionals dedicated to delivering exceptional digital solutions
+                      <p className="text-blue-100 text-sm mb-4">
+                        Where creativity meets technology to build exceptional digital solutions
                       </p>
-                      <div className="flex items-center mt-4 space-x-4">
+                      <div className="flex items-center space-x-4">
                         <div className="flex items-center">
-                          <Users className="w-4 h-4 mr-2" />
-                          <span className="text-sm">Expert Team</span>
+                          <Code className="w-4 h-4 mr-2" />
+                          <span className="text-sm">Development</span>
                         </div>
                         <div className="flex items-center">
-                          <Award className="w-4 h-4 mr-2" />
-                          <span className="text-sm">7+ Years</span>
+                          <TrendingUp className="w-4 h-4 mr-2" />
+                          <span className="text-sm">Marketing</span>
+                        </div>
+                        <div className="flex items-center">
+                          <Smartphone className="w-4 h-4 mr-2" />
+                          <span className="text-sm">Mobile Apps</span>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-
-                {/* Floating Stats Cards */}
-                <div className="absolute -top-4 -right-4 bg-white rounded-lg p-4 shadow-lg border">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-600">600+</div>
-                    <div className="text-xs text-gray-600">Projects</div>
-                  </div>
-                </div>
-                
-                <div className="absolute -bottom-4 -left-4 bg-white rounded-lg p-4 shadow-lg border">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-green-600">95%</div>
-                    <div className="text-xs text-gray-600">Satisfaction</div>
                   </div>
                 </div>
 
