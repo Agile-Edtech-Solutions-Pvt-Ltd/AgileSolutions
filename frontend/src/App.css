@@ -32,3 +32,29 @@
         transform: rotate(360deg);
     }
 }
+
+/* Hero Banner Auto-Scroll Animation */
+@keyframes slide-infinite {
+    0% {
+        transform: translateX(0);
+    }
+    33.33% {
+        transform: translateX(0);
+    }
+    36.66% {
+        transform: translateX(-33.33%);
+    }
+    66.66% {
+        transform: translateX(-33.33%);
+    }
+    70% {
+        transform: translateX(-66.66%);
+    }
+    100% {
+        transform: translateX(-66.66%);
+    }
+}
+
+.animate-slide-infinite {
+    animation: slide-infinite 15s infinite;
+}
